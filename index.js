@@ -41,14 +41,71 @@ document.addEventListener("keypress", function(event){
     playAnimation(text);
 });
 
-// document.addEventListener("keypress", function(event){
+document.addEventListener("keypress", function(event){
+    var text = event.key;
+    document.querySelector("p").innerHTML = "you have pressed    " + text;
+});
+
+// var count = 0;
+// document.querySelector("text").addEventListener("keypress", function(event){
+//     count++;
 //     var text = event.key;
-//     document.querySelector("p").innerHTML = "you have pressed    " + text;
+//     document.querySelector("p").innerHTML = "you have pressed  " + count++
 // });
 
-var count = 0;
-document.querySelector("text").addEventListener("keypress", function(event){
-    count++;
-    var text = event.key;
-    document.querySelector("p").innerHTML = "you have pressed  " + count++
-})
+// const input = document.querySelector("input[name=name");
+// input.addEventListener("change", changeHandler);
+
+// function changeHandler(e){
+//     console.log(e);
+//     console.log(e.type);
+//     console.log(e.target);
+//     console.log(e.target.className);
+//     console.log(e.target.className);
+//     console.log(e.target.id);
+//     console.log(e.target.value);
+
+// }
+
+const varName = document.querySelectorAll("input[name=program");
+
+Array.from(program).map((program) => {
+    program.addEventListener("change", programHandler);
+});
+
+function programHandler(e){
+    if(e.target.checked){
+        console.log(e.target.value);
+    }
+}
+
+const department = document.querySelector("#department")
+department.addEventListener('change', handelDepartment);
+function handelDepartment(e){
+    console.log(e.target.value);
+}
+
+
+// form submit
+const form = document.querySelector("form");
+const name = form.querySelector("div #name");
+const email = form.querySelector("div #email");
+const password = form.querySelector("div #password");
+
+form.addEventListener("submit", formHandler());
+
+function formHandler(e) {
+  e.preventDefault();
+
+  const userInfo = {
+    name: name.value,
+    email: email.value,
+    password: password.value,
+  };
+
+  console.log(userInfo);
+  name.value = "";
+  email.value = "";
+  password.value = "";
+}
+
