@@ -1,0 +1,21 @@
+.myButton{
+    row-gap: 5px;
+   background-color: #c4d0dc;
+   border-radius: 5px;
+   border: none;
+   color: white;
+   padding: 15px 32px;
+   margin: 16px;
+   display: inline;
+}
+
+.myButton:hover {
+    background-color: #04AA6D; 
+    color: white;
+  }
+
+.anim{
+    box-shadow: 0 15px 18px 0  tomato;
+    opacity: 1;
+}
+
